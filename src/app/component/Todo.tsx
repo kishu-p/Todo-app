@@ -1,17 +1,21 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Todo = () => {
 	const [count, setCount] = useState(0);
+	const [time, setTime] = useState(0);
+	useEffect(() => {
+		const timer = setInterval(() => setTime(time + 1), 1000);
+		return () => {
+			clearInterval(timer)
+		};
+	}, [time])
 
 	return (
 		<div className="lg:max-w-7xl mx-auto p-10">
-			<h1 className="flex items-center justify-center text-xl font-semibold text-black p-5">
-				This will check the entered number whether the given number is even or
-				odd.
-			</h1>
+			<h1 className="flex items-center justify-center text-xl font-semibold text-black p-5">This will check the entered number whether the given number is even or odd.</h1>
 			<div className="w-[800px] rounded-[40px] bg-black mx-auto p-10">
-				<h1 className="text-3xl font-semibold">Todo App</h1>
+				<h1 className="text-3xl font-semibold">Check even or odd</h1>
 				<div className="">
 					<div className="pt-10 text-lg font-medium">
 						<p>Count Component : {count}</p>
@@ -34,6 +38,10 @@ const Todo = () => {
 						</button>
 					</div>
 				</div>
+			</div>
+			<div className="w-[800px] rounded-[40px] bg-black mx-auto p-10 m-10">
+				<h1 className="text-3xl font-semibold">StopWatch</h1>
+				<p className="pt-10 text-lg font-medium">Current time is : {time}</p>
 			</div>
 		</div>
 	);

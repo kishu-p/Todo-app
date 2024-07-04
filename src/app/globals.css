@@ -18,11 +18,29 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background:#252528;
-}
+  position: sticky;
+  background-color: white;
+  background-image: linear-gradient(34deg, #000000 36%, #ffffff 42%), linear-gradient(150deg, #000000 87%, #ffffff 96%), linear-gradient(174deg, #000000 48%, #ffffff 53%), linear-gradient(45deg, #000000 99%, #ffffff 104%), linear-gradient(148deg, #000000 57%, #ffffff 63%), linear-gradient(132deg, #000000 70%, #ffffff 76%), linear-gradient(165deg, #000000 68%, #ffffff 88%), linear-gradient(88deg, #000000 14%, #ffffff 18%), linear-gradient(99deg, #000000 44%, #ffffff 53%), linear-gradient(87deg, #000000 82%, #ffffff 91%), linear-gradient(41deg, #000000 37%, #ffffff 46%), linear-gradient(90deg, #000000 50%, #ffffff 62%), linear-gradient(109deg, #000000 48%, #ffffff 58%), linear-gradient(58deg, #000000 25%, #ffffff 41%), linear-gradient(45deg, #000000 39%, #ffffff 56%), linear-gradient(155deg, #000000 89%, #ffffff 91%), linear-gradient(98deg, #000000 51%, #ffffff 69%);
+  background-blend-mode: difference;
+  }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.bg {
+  background-image: radial-gradient(140% 107% at 50% 10%, #000314 37.41%, #6633EE 69.27%, #FFFFFF 100%);
+
+}
+.bg1 {
+  background-image: radial-gradient(57.72% 58.33% at 47.37% 102.73%, rgba(255, 185, 162, 0.5) 0, rgba(36, 31, 71, 0) 100%), radial-gradient(92.32% 103.31% at 7.16% 96.06%, rgba(117, 116, 230, 0.9) 0%, rgba(36, 31, 71, 0) 100%);
+  background-color: #241F47;
+  
+}
+.bg2 {
+  background-image: radial-gradient(circle at center top, rgb(209, 213, 219), rgb(192, 38, 211), rgb(234, 88, 12));
+
+  
 }
